@@ -1,0 +1,43 @@
+import java.util.Scanner;
+//create mon exception 
+class n negative_Exception extends Exception{
+    public n negative5(){
+        super();}}
+        class DepassCapacite_Exception extends Exception{
+            public DepassCapacite_Exception(){
+                super();}}
+class tableau {
+    static int [] T=new int[10];
+    static void loadT(){
+        Scanner s=new Scanner(system.in); System.out.println("donner n :");
+        try{
+            int n=s.nextInt()
+            if(n<=0) throw new n_negative_Exception();
+            if(n>10) throw new DepassCapacite_Exception();
+            System.out.println("charg de " +n+"entiers dans T");
+            for (int i=0;i<n;i++)  T[i]=i*10;
+     }
+     catch(n_negative_Exception e){
+        System.out.println("n invalide");
+
+     }
+     catch (DepassCapacite_Exception e){
+        system.out.println("\tload:attention!pb depass.capacite tab.");
+           }
+       }
+       public static void showT(int n){
+        System.out.println("affich.de"+n+"entiers de T");
+        try{
+            if(n<=0) throw new n_negative_Exception();
+            if(n>10) throw new DepassCapacite_Exception();
+            for(int i=0;i<n;i++) System.out.println(T[i]);
+
+        }
+        catch(n_negative_Exception e){
+            System.out.println("n invalide");
+
+        }
+        catch(Exceptio e){
+            System.out.println("\tshow:attention!pb depass.capacite tab.");        }
+       }
+}
